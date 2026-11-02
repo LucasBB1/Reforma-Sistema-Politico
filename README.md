@@ -1,10 +1,12 @@
 # Entrar y permanecer: el doble umbral de afiliación de la reforma al sistema político y la oferta partidaria de 2028
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23895805.svg)](https://doi.org/10.5281/zenodo.23895805)
+
 Código y datos del **Documento de trabajo N.° 3** de Lucas Bottinelli Baltra. El estudio evalúa, antes de su entrada en vigencia, cómo la reforma al sistema político (Boletín N.° 17.640-06) reconfigura la oferta partidaria de cara a las elecciones regionales y municipales de 2028: cumplimiento de los umbrales de afiliación por partido y región, exposición de la votación de 2024 y simulación D'Hondt del efecto mecánico de excluir a un partido.
 
 **Autor:** Lucas Bottinelli Baltra · [lucasbb1.github.io](https://lucasbb1.github.io) · ORCID [0009-0000-4865-7261](https://orcid.org/0009-0000-4865-7261)
 
-El documento está en `documento/` (Word y PDF).
+El documento está en `documento/` (Word y PDF) y en Zenodo: https://doi.org/10.5281/zenodo.23895854
 
 ## Resultados principales
 
@@ -36,7 +38,9 @@ Paquetes: `dplyr`, `tidyr`, `readr`, `purrr`, `stringr`, `ggplot2`, `readxl`.
 
 ## Cómo citar
 
-Bottinelli Baltra, L. (2026). *Entrar y permanecer: el doble umbral de afiliación de la reforma al sistema político y la oferta partidaria de 2028* (Documento de trabajo N.° 3).
+Bottinelli Baltra, L. (2026). *Entrar y permanecer: el doble umbral de afiliación de la reforma al sistema político y la oferta partidaria de 2028* (Documento de trabajo N.° 3). https://doi.org/10.5281/zenodo.23895854
+
+Código y datos: Bottinelli Baltra, L. (2026). *Reforma-Sistema-Politico* (Versión 1.0.0) [Software]. Zenodo. https://doi.org/10.5281/zenodo.23895805
 
 ## Licencias
 
