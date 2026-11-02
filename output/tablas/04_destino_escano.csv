@@ -1,0 +1,35 @@
+def;eleccion;sigla;bloque_origen;escanos;pct_mismo_bloque;mismo_bloque
+cupo;concejales;EVOPOLI;Derecha;43;0,395348837209302;17
+cupo;concejales;FRVS;Centro e izquierda;31;0,451612903225806;14
+cupo;concejales;PCC;Derecha;5;0,000000000000000;0
+cupo;concejales;PCCh;Centro e izquierda;1;0,000000000000000;0
+cupo;concejales;PDC;Centro e izquierda;39;0,410256410256410;16
+cupo;concejales;PL;Centro e izquierda;9;0,555555555555556;5
+cupo;concejales;PPD;Centro e izquierda;42;0,452380952380952;19
+cupo;concejales;PR;Centro e izquierda;26;0,346153846153846;9
+cupo;concejales;PRCh;Derecha;115;0,286956521739130;33
+cupo;concejales;UDI;Derecha;32;0,531250000000000;17
+cupo;core;EVOPOLI;Derecha;2;1,000000000000000;2
+cupo;core;FRVS;Centro e izquierda;2;0,500000000000000;1
+cupo;core;PCC;Derecha;2;0,500000000000000;1
+cupo;core;PDC;Centro e izquierda;4;0,250000000000000;1
+cupo;core;PPD;Centro e izquierda;7;0,285714285714286;2
+cupo;core;PRCh;Derecha;31;0,516129032258065;16
+cupo;core;UDI;Derecha;2;1,000000000000000;2
+militantes;concejales;EVOPOLI;Derecha;30;0,366666666666667;11
+militantes;concejales;FRVS;Centro e izquierda;24;0,416666666666667;10
+militantes;concejales;PCC;Derecha;4;0,000000000000000;0
+militantes;concejales;PCCh;Centro e izquierda;1;0,000000000000000;0
+militantes;concejales;PDC;Centro e izquierda;34;0,441176470588235;15
+militantes;concejales;PL;Centro e izquierda;6;0,500000000000000;3
+militantes;concejales;PPD;Centro e izquierda;28;0,392857142857143;11
+militantes;concejales;PR;Centro e izquierda;21;0,238095238095238;5
+militantes;concejales;PRCh;Derecha;113;0,283185840707965;32
+militantes;concejales;UDI;Derecha;21;0,571428571428571;12
+militantes;core;EVOPOLI;Derecha;1;1,000000000000000;1
+militantes;core;FRVS;Centro e izquierda;1;1,000000000000000;1
+militantes;core;PCC;Derecha;2;0,500000000000000;1
+militantes;core;PDC;Centro e izquierda;4;0,250000000000000;1
+militantes;core;PPD;Centro e izquierda;7;0,285714285714286;2
+militantes;core;PRCh;Derecha;31;0,516129032258065;16
+militantes;core;UDI;Derecha;2;1,000000000000000;2
