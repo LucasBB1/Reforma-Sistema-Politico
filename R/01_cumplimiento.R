@@ -2,8 +2,8 @@
 # 01_cumplimiento.R
 # -----------------------------------------------------------------------------
 # Cumplimiento territorial de los umbrales de afiliación por partido y región:
-#   - umbral de constitución (0,3 % del padrón, art. 6)
-#   - umbral de mantención (0,15 %, art. 56 N.° 4), que rige a los partidos ya
+#   - umbral de constitución (0,3 % del padrón, con un mínimo de 500 afiliados, art. 6)
+#   - umbral de mantención (la mitad, 0,15 %, art. 56 N.° 4), que rige a los partidos ya
 #     constituidos durante el plazo transitorio de 18 meses
 #   - mínimo de ocho regiones sin riesgo para conservar la calidad de partido
 # Compara los cortes del SERVEL al 31 de julio y al 30 de septiembre de 2026.
@@ -29,8 +29,9 @@ base <- afil |>
          constituido = constituido == "Sí",
          afiliados = replace_na(afiliados, 0),
          tasa = afiliados / padron_definitivo,
-         piso_constitucion = UMBRAL_CONSTITUCION * padron_definitivo,
-         piso_mantencion = UMBRAL_MANTENCION * padron_definitivo,
+         # art. 6: 0,3 % del padrón, con un mínimo de 500 afiliados; art. 56 N.° 4: la mitad
+         piso_constitucion = pmax(MINIMO_ABSOLUTO, UMBRAL_CONSTITUCION * padron_definitivo),
+         piso_mantencion = piso_constitucion / 2,
          cumple_constitucion = constituido & afiliados >= piso_constitucion,
          segura = constituido & afiliados >= piso_mantencion,
          en_riesgo = constituido & !segura,

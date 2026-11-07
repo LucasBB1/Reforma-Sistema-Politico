@@ -6,11 +6,12 @@ Código y datos del **Documento de trabajo N.° 3** de Lucas Bottinelli Baltra. 
 
 **Autor:** Lucas Bottinelli Baltra · [lucasbb1.github.io](https://lucasbb1.github.io) · ORCID [0009-0000-4865-7261](https://orcid.org/0009-0000-4865-7261)
 
-El documento está en `documento/` (Word y PDF) y en Zenodo: https://doi.org/10.5281/zenodo.23895854
+El documento está en `documento/` (Word y PDF) y en Zenodo: https://doi.org/10.5281/zenodo.24030166 (versión 2.0)
 
 ## Resultados principales
 
-- El cambio de denominador, de votantes a padrón, eleva el umbral efectivo de afiliación en 39,8%.
+- Frente a los mínimos vigentes fijados por el SERVEL (0,25% de los votos válidamente emitidos), el nuevo denominador eleva el umbral efectivo de afiliación en 70,2%.
+- Con la regla vigente, el Partido Liberal, Evópoli y la FRVS conservarían ocho regiones o más; su situación de riesgo es un efecto de la reforma.
 - Cuatro de los quince partidos constituidos no reúnen ocho regiones sobre el umbral de mantención (0,15%); con el de constitución (0,3%) no las reunirían trece.
 - El riesgo depende del número total de afiliados y no de su concentración territorial.
 - La reforma también expone la presencia regional de partidos medianos y grandes: el Partido Republicano está bajo el umbral en siete regiones, de donde provino el 81% de su voto de 2024 en concejales.
@@ -38,10 +39,15 @@ Paquetes: `dplyr`, `tidyr`, `readr`, `purrr`, `stringr`, `ggplot2`, `readxl`.
 
 ## Cómo citar
 
-Bottinelli Baltra, L. (2026). *Entrar y permanecer: el doble umbral de afiliación de la reforma al sistema político y la oferta partidaria de 2028* (Documento de trabajo N.° 3). https://doi.org/10.5281/zenodo.23895854
+Bottinelli Baltra, L. (2026). *Entrar y permanecer: el doble umbral de afiliación de la reforma al sistema político y la oferta partidaria de 2028* (Documento de trabajo N.° 3, versión 2.0). https://doi.org/10.5281/zenodo.24030166
 
 Código y datos: Bottinelli Baltra, L. (2026). *Reforma-Sistema-Politico* (Versión 1.0.0) [Software]. Zenodo. https://doi.org/10.5281/zenodo.23895805
 
 ## Licencias
 
 Código: MIT (`LICENSE`). Datos procesados, tablas, figuras y texto: CC BY 4.0 (`LICENSE-DATOS.md`).
+
+## Versiones
+
+- **2.0.0** (noviembre de 2026). El umbral vigente antes de la reforma se toma de la Resolución O-N.° 0039 del SERVEL (6 de febrero de 2026), que lo calcula sobre los votos válidamente emitidos, y no sobre el total de votantes como en la versión 1.0. Se aplica el mínimo de 500 afiliados del artículo 6 a ambos umbrales. El aumento efectivo del umbral pasa de 39,8% a 70,2% y cambia la comparación con la regla vigente. Se precisan el calendario de 2028 y la interpretación de la norma sobre las regiones contiguas.
+- **1.0.0** (noviembre de 2026). Versión inicial.

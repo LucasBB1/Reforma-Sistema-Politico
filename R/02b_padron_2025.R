@@ -3,10 +3,15 @@
 # -----------------------------------------------------------------------------
 # Inscritos y votantes por región en la elección de diputados de 2025.
 #   - Valida el padrón regional usado en 01 (inscritos = padrón definitivo).
-#   - Calcula el umbral anterior a la reforma (0,25 % de quienes sufragaron en la
-#     última elección de diputados) para compararlo con el nuevo (0,3 % del padrón).
+#   - Compara el umbral vigente antes de la reforma con el nuevo (0,3 % del padrón,
+#     con un mínimo de 500). El umbral vigente es el que fijó el SERVEL en la
+#     Resolución O-N.° 0039, de 6 de febrero de 2026, con el escrutinio general del
+#     Tribunal Calificador de Elecciones. Esa resolución aplica el 0,25 % sobre los
+#     votos válidamente emitidos, lo que se verifica con los votos válidos del
+#     archivo de resultados del SERVEL.
 #
-# Entradas  data/raw/2025_11_Diputados_Datos_Eleccion_v2.xlsx, data/fuentes/padron_region.csv
+# Entradas  data/raw/2025_11_Diputados_Datos_Eleccion_v2.xlsx, data/fuentes/padron_region.csv,
+#           data/fuentes/minimos_afiliados_servel_2026.csv
 # Salidas   output/tablas/02b_umbral_antes_despues.csv
 # =============================================================================
 
@@ -24,11 +29,21 @@ part <- read_excel(f, sheet = "Participación", skip = 6) |>
   group_by(region = NUM_REGION[as.character(`Nro.Región`)]) |>
   summarise(inscritos = sum(Inscritos), votantes = sum(Votos), .groups = "drop")
 
+validos <- read_excel(f, sheet = "Votación por comuna", skip = 6) |>
+  filter(!is.na(`Nro.Región`), !Nombres %in% c("VOTOS NULOS", "VOTOS EN BLANCO")) |>
+  group_by(region = NUM_REGION[as.character(`Nro.Región`)]) |>
+  summarise(validos = sum(Votos), .groups = "drop")
+
 padron <- leer_csv2(file.path(DIR_FUE, "padron_region.csv"))
-comp <- padron |> left_join(part, by = "region") |>
+minimos <- leer_csv2(file.path(DIR_FUE, "minimos_afiliados_servel_2026.csv"))
+comp <- padron |> left_join(part, by = "region") |> left_join(validos, by = "region") |>
+  left_join(minimos, by = "region") |>
   mutate(diferencia_padron = padron_definitivo - inscritos,
          participacion = votantes / inscritos,
-         umbral_antes = 0.0025 * votantes, umbral_despues = UMBRAL_CONSTITUCION * padron_definitivo,
+         validos_pct = validos / votantes,
+         control_validos = pmax(MINIMO_ABSOLUTO, round(0.0025 * validos)),   # debe reproducir la resolución
+         umbral_antes = minimo_constitucion_vigente,
+         umbral_despues = pmax(MINIMO_ABSOLUTO, UMBRAL_CONSTITUCION * padron_definitivo),
          mantencion_antes = umbral_antes / 2, mantencion_despues = umbral_despues / 2,
          aumento = umbral_despues / umbral_antes - 1)
 print(as.data.frame(comp))

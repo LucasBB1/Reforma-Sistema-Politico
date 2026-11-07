@@ -19,6 +19,7 @@ for (d in c(DIR_PROC, DIR_TAB, DIR_FIG)) dir.create(d, recursive = TRUE, showWar
 UMBRAL_CONSTITUCION <- 0.003   # art. 6: 0,3 % del padrón electoral definitivo
 UMBRAL_MANTENCION   <- 0.0015  # art. 56 N.° 4: menos del 50 % del número exigido
 MIN_REGIONES        <- 8       # arts. 3 y 56: sin la alternativa de tres regiones contiguas
+MINIMO_ABSOLUTO     <- 500     # art. 6: si el porcentaje da menos de 500 afiliados, se exigen 500
 
 REGIONES <- c("Arica y Parinacota", "Tarapacá", "Antofagasta", "Atacama", "Coquimbo",
               "Valparaíso", "Metropolitana de Santiago", "O'Higgins", "Maule", "Ñuble",
