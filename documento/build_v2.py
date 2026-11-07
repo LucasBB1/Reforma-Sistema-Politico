@@ -11,7 +11,7 @@ import sys
 TPL = '/home/claude/entregables/Bottinelli-Baltra_2026_La-Reina-2028.docx'
 OUT = sys.argv[1] if len(sys.argv) > 1 else '/home/claude/entregables/Bottinelli-Baltra_2026_Reforma-sistema-politico.docx'
 DOI_DOC = '24030166'
-DOI_COD = 'XXXXXXXX'
+DOI_COD = '24030314'
 REPO = 'https://github.com/LucasBB1/Reforma-Sistema-Politico'
 TITULO = 'Entrar y permanecer: el doble umbral de afiliación de la reforma al sistema político y la oferta partidaria de 2028'
 
